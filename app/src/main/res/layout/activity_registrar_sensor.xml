@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrarSensor_Activity">
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="600dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lbl_proximitySensor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sensor de proximidad"
+                android:textSize="20sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="#bcbcbc"/>
+
+            <TextView
+                android:id="@+id/lbl_valueProximitySensor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valor"
+                android:textSize="20sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@id/lbl_proximitySensor"
+                android:textColor="#bcbcbc"/>
+
+            <Button
+                android:id="@+id/btn_proximitySensor"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Guardar Valor"
+                android:layout_below="@id/lbl_valueProximitySensor"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:background="#5a595a"
+                android:textColor="@color/white"/>
+
+            <View
+                android:id="@+id/viewSeparator1"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/btn_proximitySensor"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/lbl_magnetismSensor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewSeparator1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Sensor de magnetismo"
+                android:textSize="20sp"
+                android:textColor="#bcbcbc"/>
+
+            <TextView
+                android:id="@+id/lbl_valueMagnetismSensor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valor"
+                android:textSize="20sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@id/lbl_magnetismSensor"
+                android:textColor="#bcbcbc"/>
+
+            <Button
+                android:id="@+id/btn_magnetismSensor"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Guardar Valor"
+                android:layout_below="@id/lbl_valueMagnetismSensor"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:background="#5a595a"
+                android:textColor="@color/white"/>
+
+            <View
+                android:id="@+id/viewSeparator2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/btn_magnetismSensor"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/lbl_lightSensor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewSeparator2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Sensor de luz"
+                android:textSize="20sp"
+                android:textColor="#bcbcbc"/>
+
+            <TextView
+                android:id="@+id/lbl_valueLightSensor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valor"
+                android:textSize="20sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@id/lbl_lightSensor"
+                android:textColor="#bcbcbc"/>
+
+            <Button
+                android:id="@+id/btn_lightSensor"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Guardar Valor"
+                android:layout_below="@id/lbl_valueLightSensor"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:background="#5a595a"
+                android:textColor="@color/white"/>
+
+            <View
+                android:id="@+id/viewSeparator3"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/btn_lightSensor"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/lbl_accelerometer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewSeparator3"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Acelerometro"
+                android:textSize="20sp"
+                android:textColor="#bcbcbc"/>
+
+            <TextView
+                android:id="@+id/lbl_valueAccelerometer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valor"
+                android:textSize="20sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@id/lbl_accelerometer"
+                android:textColor="#bcbcbc"/>
+
+            <Button
+                android:id="@+id/btn_accelerometer"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Guardar Valor"
+                android:layout_below="@id/lbl_valueAccelerometer"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:background="#5a595a"
+                android:textColor="@color/white"/>
+
+            <View
+                android:id="@+id/viewSeparator4"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/btn_accelerometer"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"/>
+
+
+            <TextView
+                android:id="@+id/lbl_gravitySensor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewSeparator3"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Sensor de gravedad"
+                android:textSize="20sp"
+                android:textColor="#bcbcbc"/>
+
+            <TextView
+                android:id="@+id/lbl_valueGravitySensor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valor"
+                android:textSize="20sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@id/lbl_gravitySensor"
+                android:textColor="#bcbcbc"/>
+
+            <Button
+                android:id="@+id/btn_gravitySensor"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Guardar Valor"
+                android:layout_below="@id/lbl_valueAccelerometer"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:background="#5a595a"
+                android:textColor="@color/white"/>
+
+            <View
+                android:id="@+id/viewSeparator5"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/btn_gravitySensor"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/lbl_titleComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Observación"
+        android:layout_below="@+id/scrollView"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/txt_observation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint=""
+        android:layout_below="@id/lbl_titleComment"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"/>
+
+
+</RelativeLayout>
