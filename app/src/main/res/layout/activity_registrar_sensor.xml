@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrarSensor_Activity">
+    tools:context=".RegistrarSensor_Activity"
+    android:background="#685489">
 
 
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="600dp">
+        android:layout_height="600dp"
+        android:background="#43457f">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,7 +48,7 @@
                 android:layout_below="@id/lbl_valueProximitySensor"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="8dp"
-                android:background="#5a595a"
+                android:background="#976393"
                 android:textColor="@color/white"/>
 
             <View
@@ -89,7 +91,7 @@
                 android:layout_below="@id/lbl_valueMagnetismSensor"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="8dp"
-                android:background="#5a595a"
+                android:background="#976393"
                 android:textColor="@color/white"/>
 
             <View
@@ -132,7 +134,7 @@
                 android:layout_below="@id/lbl_valueLightSensor"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="8dp"
-                android:background="#5a595a"
+                android:background="#976393"
                 android:textColor="@color/white"/>
 
             <View
@@ -175,7 +177,7 @@
                 android:layout_below="@id/lbl_valueAccelerometer"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="8dp"
-                android:background="#5a595a"
+                android:background="#976393"
                 android:textColor="@color/white"/>
 
             <View
@@ -219,7 +221,7 @@
                 android:layout_below="@id/lbl_valueAccelerometer"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="8dp"
-                android:background="#5a595a"
+                android:background="#976393"
                 android:textColor="@color/white"/>
 
             <View

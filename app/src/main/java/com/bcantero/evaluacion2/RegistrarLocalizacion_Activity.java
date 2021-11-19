@@ -40,11 +40,7 @@ public class RegistrarLocalizacion_Activity extends AppCompatActivity implements
         switch(v.getId()){
             case R.id.btn_save:
 
-                place_name = txt_place.getText().toString();
-                latitude = txt_latitude.getText().toString();
-                longitude = txt_latitude.getText().toString();
-
-                inserlocation(place_name, latitude, longitude);
+                inserlocation();
 
                 break;
 
@@ -57,25 +53,36 @@ public class RegistrarLocalizacion_Activity extends AppCompatActivity implements
         }
     }
 
-    private void inserlocation(String place_name, String latitude, String longitude){
+    private void inserlocation(){
 
         ConexionSQLiteHelper conn =   new ConexionSQLiteHelper(this, "db_app", null, 1);
         SQLiteDatabase db = conn.getWritableDatabase();
 
-        try {
+        place_name = txt_place.getText().toString();
+        latitude = txt_latitude.getText().toString();
+        longitude = txt_longitude.getText().toString();
 
-            String INSERT = "INSERT INTO map (place_name, latitude, longitude) VALUES ('" + place_name + "', '" + latitude + "', '" + longitude + "')";
+        if(!(place_name.isEmpty() || latitude.isEmpty() || longitude.isEmpty())){
 
-            db.execSQL(INSERT);
-            db.close();
+           try {
 
-            Toast.makeText(getApplicationContext(), "Localización guardada correctamente", Toast.LENGTH_SHORT).show();
+                String INSERT = "INSERT INTO map (place_name, latitude, longitude) VALUES ('" + place_name + "', '" + latitude + "', '" + longitude + "')";
 
+                db.execSQL(INSERT);
+                db.close();
 
-        }catch (Exception e){
+                Toast.makeText(getApplicationContext(), "Localización guardada correctamente", Toast.LENGTH_SHORT).show();
 
-            Toast.makeText(getApplicationContext(), "Error al guardar localización", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, ListaLocalizaciones_Activity.class);
+                startActivity(intent);
 
+            }catch (Exception e){
+                Toast.makeText(getApplicationContext(), "Error al guardar localización", Toast.LENGTH_SHORT).show();
+            }
+
+        }else{
+
+            Toast.makeText(getApplicationContext(), "Hay campos vacios", Toast.LENGTH_SHORT).show();
 
         }
 

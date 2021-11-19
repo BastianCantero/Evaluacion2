@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditarLocalizacion_Activity">
+    tools:context=".EditarLocalizacion_Activity"
+    android:background="#976393">
 
 
     <TextView
@@ -99,7 +100,8 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
-        android:text="Ver en el mapa" />
+        android:text="Ver en el mapa"
+        android:background="#685489"/>
 
     <Button
         android:id="@+id/btn_deletePlace"
@@ -110,7 +112,20 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
-        android:text="Eliminar registro" />
+        android:text="Eliminar registro"
+        android:background="#685489"/>
+
+    <Button
+        android:id="@+id/btn_viewList"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="#43457f"
+        android:text="Volver a la lista"
+        android:textSize="20sp" />
 
 
 </RelativeLayout>

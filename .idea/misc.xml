@@ -4,11 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Bastian/Documents/GitHub/Evaluacion2/app/src/main/res/layout/activity_datos_sensor.xml" value="0.3625" />
-        <entry key="..\:/Users/Bastian/Documents/GitHub/Evaluacion2/app/src/main/res/layout/activity_editar_localizacion.xml" value="0.1" />
+        <entry key="..\:/Users/Bastian/Documents/GitHub/Evaluacion2/app/src/main/res/layout/activity_editar_localizacion.xml" value="0.25" />
         <entry key="..\:/Users/Bastian/Documents/GitHub/Evaluacion2/app/src/main/res/layout/activity_editar_sensor.xml" value="0.25" />
         <entry key="..\:/Users/Bastian/Documents/GitHub/Evaluacion2/app/src/main/res/layout/activity_lista_localizaciones.xml" value="0.33" />
         <entry key="..\:/Users/Bastian/Documents/GitHub/Evaluacion2/app/src/main/res/layout/activity_lista_sensores.xml" value="0.3625" />
         <entry key="..\:/Users/Bastian/Documents/GitHub/Evaluacion2/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Bastian/Documents/GitHub/Evaluacion2/app/src/main/res/layout/activity_maps.xml" value="0.3625" />
         <entry key="..\:/Users/Bastian/Documents/GitHub/Evaluacion2/app/src/main/res/layout/activity_registrar_localizacion.xml" value="0.3625" />
         <entry key="..\:/Users/Bastian/Documents/GitHub/Evaluacion2/app/src/main/res/layout/activity_registrar_sensor.xml" value="0.3625" />
       </map>

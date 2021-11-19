@@ -3,6 +3,7 @@ package com.bcantero.evaluacion2;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -31,10 +32,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private String sensor_type, sensor_value, date, observation;
 
+    private AlertDialog alertDialog;
+    private AlertDialog.Builder builder;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        builder =  new AlertDialog.Builder(MainActivity.this);
+
+        builder.setTitle("¿Eliminar registro?");
 
         btn_addSensor = (Button) findViewById(R.id.btn_addSensor);
         btn_addSensor.setOnClickListener(this);
@@ -65,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 startActivity(editarSensor);
 
-                Toast.makeText(getApplicationContext(), idItem, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), idItem, Toast.LENGTH_SHORT).show();
 
             }
         });

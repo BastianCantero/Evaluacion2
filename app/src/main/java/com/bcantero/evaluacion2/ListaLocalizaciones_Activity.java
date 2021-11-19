@@ -63,7 +63,7 @@ public class ListaLocalizaciones_Activity extends AppCompatActivity implements V
 
                 startActivity(editarLocalizacion);
 
-                Toast.makeText(getApplicationContext(), idItem, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), idItem, Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -94,7 +94,7 @@ public class ListaLocalizaciones_Activity extends AppCompatActivity implements V
                 localizacion =  new Localizacion();
                 localizacion.setId_location(cursor.getString(0));
                 localizacion.setPlace_name(cursor.getString(1));
-                localizacion.setLongitude(cursor.getString(2));
+                localizacion.setLatitude(cursor.getString(2));
                 localizacion.setLongitude(cursor.getString(3));
 
                 locationList.add(localizacion);

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#2e2e2e">
+    android:background="#43457f">
 
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -57,9 +57,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
+            android:layout_margin="3dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
             android:layout_toStartOf="@+id/centerHorizontalShim"
+            android:background="#976393"
             android:text="Agregar Sensor" />
 
         <Button
@@ -69,9 +73,13 @@
             android:layout_height="match_parent"
 
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
+            android:layout_margin="3dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
             android:layout_toEndOf="@+id/centerHorizontalShim"
+            android:background="#ff9b83"
             android:text="Lista de direcciónes" />
     </RelativeLayout>
 

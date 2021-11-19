@@ -2,6 +2,8 @@ package com.bcantero.evaluacion2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -24,14 +26,16 @@ public class EditarSensor_Activity extends AppCompatActivity implements View.OnC
     Bundle idItem;
     String itemId;
 
-
+    private AlertDialog alertDialog;
+    private AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar_sensor);
 
-
+        builder =  new AlertDialog.Builder(EditarSensor_Activity.this);
+        builder.setTitle("¿Eliminar registro?");
 
         idItem =  getIntent().getExtras();
         itemId = idItem.getString("idItem");
@@ -73,10 +77,28 @@ public class EditarSensor_Activity extends AppCompatActivity implements View.OnC
 
             case R.id.btn_deleteRegistro:
 
-                deleteRegistro(itemId);
+                builder.setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
 
-                idItem =  getIntent().getExtras();
-                itemId = idItem.getString("idItem");
+                        deleteRegistro(itemId);
+
+                        idItem =  getIntent().getExtras();
+                        itemId = idItem.getString("idItem");
+
+                        Toast.makeText(getApplicationContext(), "Registro Eliminado", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //alertDialog.closeOptionsMenu();
+                    }
+                });
+
+                alertDialog = builder.create();
+                alertDialog.show();
 
                 break;
 
