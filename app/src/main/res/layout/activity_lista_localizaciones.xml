@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#2e2e2e">
-
+    tools:context=".ListaLocalizaciones_Activity">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
@@ -19,23 +17,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Lista Sensores"
+            android:text="Lista de direcciónes"
             android:textColor="#bcbcbc"
             android:textSize="25sp" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <ListView
-        android:id="@+id/listView_sensor"
+        android:id="@+id/listViewLocation"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="match_parent"
         android:layout_above="@+id/layoutButton"
         android:layout_below="@+id/swipeRefreshLayout"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp">
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp" />
 
-
-    </ListView>
 
     <RelativeLayout
         android:id="@+id/layoutButton"
@@ -53,18 +49,18 @@
             android:background="@color/white"/>
 
         <Button
-            android:id="@+id/btn_addSensor"
+            android:id="@+id/btn_addrDireccion"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
             android:layout_marginStart="0dp"
             android:layout_marginEnd="0dp"
             android:layout_toStartOf="@+id/centerHorizontalShim"
-            android:text="Agregar Sensor" />
+            android:text="Agregar dirección" />
 
         <Button
 
-            android:id="@+id/btn_addDireccion"
+            android:id="@+id/btn_sensorLisr"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
@@ -72,8 +68,7 @@
             android:layout_marginStart="0dp"
             android:layout_marginEnd="0dp"
             android:layout_toEndOf="@+id/centerHorizontalShim"
-            android:text="Lista de direcciónes" />
+            android:text="Lista de sensores" />
     </RelativeLayout>
-
 
 </RelativeLayout>

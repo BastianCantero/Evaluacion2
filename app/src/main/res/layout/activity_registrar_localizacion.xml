@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrarLocalizacion_Activity">
+
+    <TextView
+        android:id="@+id/lbl_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lugar:"
+        android:textSize="25sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"/>
+
+    <EditText
+        android:id="@+id/txt_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbl_place"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/lbl_latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latitud:"
+        android:textSize="25sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/txt_place"/>
+
+    <EditText
+        android:id="@+id/txt_latitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@id/lbl_latitude"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/lbl_longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Longitud:"
+        android:textSize="25sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/txt_latitude"/>
+
+    <EditText
+        android:id="@+id/txt_longitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@id/lbl_longitude"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar datos"
+        android:layout_below="@+id/txt_longitude"
+        android:textSize="20sp"
+        android:layout_margin="15dp"/>
+
+    <Button
+        android:id="@+id/btn_viewList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vel Lista"
+        android:layout_below="@+id/btn_save"
+        android:textSize="20sp"
+        android:layout_margin="15dp"/>
+
+</RelativeLayout>

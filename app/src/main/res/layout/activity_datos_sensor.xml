@@ -5,128 +5,165 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DatosSensor_Activity"
-    android:background="#2e2e2e">
+    android:background="#ff9b83"
+    android:id="@+id/datosSensorLayout">
 
-    <TextView
-        android:id="@+id/lbl_sensorType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tipo Sensor:"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="15dp"
-        android:textSize="20sp"
-        android:textColor="#bcbcbc"/>
 
-    <TextView
-        android:id="@+id/lbl_getSensorTypeValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lbl_sensorType"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="15dp"
-        android:text="sensorType"
-        android:textColor="#bcbcbc"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/lbl_sensorValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Valor:"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="15dp"
-        android:textSize="20sp"
-        android:layout_below="@id/lbl_getSensorTypeValue"
-        android:textColor="#bcbcbc"/>
-
-    <TextView
-        android:id="@+id/lblgetValueSensor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lbl_sensorValue"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
-        android:text="valueSensor"
-        android:textColor="#bcbcbc"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/lbl_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fecha:"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="15dp"
-        android:textSize="20sp"
-        android:layout_below="@id/lblgetValueSensor"
-        android:textColor="#bcbcbc"/>
-
-    <TextView
-        android:id="@+id/lbl_getDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lbl_date"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
-        android:text="date"
-        android:textColor="#bcbcbc"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/lbl_obsertavion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lbl_getDate"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="25dp"
-        android:text="Observación:"
-        android:textSize="20sp"
-        android:textColor="#bcbcbc"/>
-
-    <EditText
-        android:id="@+id/txt_valueObservation"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lbl_obsertavion"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="15dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="20sp" />
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutButton"
+        android:layout_marginBottom="5dp">
 
-    <Button
-        android:id="@+id/btn_update"
+        <TextView
+            android:id="@+id/lbl_sensorType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Tipo Sensor:"
+            android:textColor="#43457f"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lbl_getSensorTypeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl_sensorType"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="sensorType"
+            android:textColor="#43457f"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lbl_sensorValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl_getSensorTypeValue"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Valor:"
+            android:textColor="#43457f"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lblgetValueSensor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl_sensorValue"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:text="valueSensor"
+            android:textColor="#43457f"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lbl_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblgetValueSensor"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Fecha:"
+            android:textColor="#43457f"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lbl_getDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl_date"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:text="date"
+            android:textColor="#43457f"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lbl_obsertavion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl_getDate"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Observación:"
+            android:textColor="#43457f"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/txt_valueObservation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl_obsertavion"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_valueObservation"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Actualizar observación" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/btn_update"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Eliminar registro" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layoutButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txt_valueObservation"
-        android:layout_margin="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:text="Actualizar observación" />
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:layout_below="@+id/datosSensorLayout"
+        tools:ignore="NotSibling">
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="@color/white"
-        android:layout_below="@+id/btn_update"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"/>
 
-    <Button
-        android:id="@+id/btn_delete"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Eliminar registro"
-        android:layout_below="@id/view"
-        android:layout_margin="20dp"/>
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:text="Volver" />
+
+
+    </RelativeLayout>
 
 
 </RelativeLayout>

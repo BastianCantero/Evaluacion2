@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarLocalizacion_Activity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutButton"
+        android:layout_marginBottom="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lbl_idSensor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:text="Id registro:"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/lbl_valueIdSensor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/lbl_idSensor"
+                android:text="ID"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/lbl_typeSensor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_valueIdSensor"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:text="Tipo Sensor:"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/lbl_valueTypeSensor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_typeSensor"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="valueTypeSensor"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/lbl_SensorValor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_valueTypeSensor"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:text="Valor:"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/lbl_valueSensorValor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_SensorValor"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="valueValueSensor"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/lbl_DateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_valueSensorValor"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:text="Fecha:"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/lbl_valueDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_DateValue"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="valueDate"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/lbl_observacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_valueDate"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:text="Observación:"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/txt_editObservation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_observacion"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_editObservation"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Editar registro" />
+
+            <Button
+                android:id="@+id/btn_deleteRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_edit"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Eliminar registro" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/layoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        tools:ignore="NotSibling">
+
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:text="Volver" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

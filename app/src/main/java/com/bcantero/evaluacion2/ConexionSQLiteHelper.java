@@ -8,9 +8,9 @@ import androidx.annotation.Nullable;
 
 public class ConexionSQLiteHelper extends SQLiteOpenHelper {
 
-    final String CREATE_TABLE_SENSOR = "CREATE TABLE sensor (sensor_type TEXT, sensor_value TEXT, date TEXT, observation TEXT)";
+    final String CREATE_TABLE_SENSOR = "CREATE TABLE sensor (id_sensor INTEGER PRIMARY KEY AUTOINCREMENT, sensor_type TEXT, sensor_value TEXT, date TEXT, observation TEXT)";
 
-    final String CREATE_TABLE_MAP = "CREATE TABLE map (place_name TEXT, latitude TEXT, longitude TEXT)";
+    final String CREATE_TABLE_MAP = "CREATE TABLE map (id_location INTEGER PRIMARY KEY AUTOINCREMENT, place_name TEXT, latitude TEXT, longitude TEXT)";
 
     public ConexionSQLiteHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);

@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
 
-        conexionSQLiteHelper =  new ConexionSQLiteHelper(getApplicationContext(), "db_sensor", null, 1);
+        conexionSQLiteHelper =  new ConexionSQLiteHelper(getApplicationContext(), "db_app", null, 1);
 
         consultarSensor();
 
@@ -56,7 +57,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                ///
+                String idItem = sensorList.get(position).getId_sensor();
+
+                Intent editarSensor = new Intent(MainActivity.this , EditarSensor_Activity.class);
+
+                editarSensor.putExtra("idItem", idItem.toString());
+
+                startActivity(editarSensor);
+
+                Toast.makeText(getApplicationContext(), idItem, Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -81,6 +90,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btn_addDireccion:
+                Intent registerLocationIntent =  new Intent(this, ListaLocalizaciones_Activity.class);
+                startActivity(registerLocationIntent);
 
                 break;
         }
@@ -97,10 +108,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         while (cursor.moveToNext()){
             sensor =  new Sensor();
-            sensor.setSensor_type(cursor.getString(0));
-            sensor.setSensor_value(cursor.getString(1));
-            sensor.setDate(cursor.getString(2));
-            sensor.setObservation(cursor.getString(3));
+            sensor.setId_sensor(cursor.getString(0));
+            sensor.setSensor_type(cursor.getString(1));
+            sensor.setSensor_value(cursor.getString(2));
+            sensor.setDate(cursor.getString(3));
+            sensor.setObservation(cursor.getString(4));
+
 
             sensorList.add(sensor);
         }
@@ -110,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void obtenerListaSensores(){
         informationList =  new ArrayList<String>();
         for (int i = 0; i < sensorList.size(); i++){
-            informationList.add( "\n"+ sensorList.get(i).getSensor_type() + " \n\nValor:\n" + sensorList.get(i).getSensor_value() + "\n");
+            informationList.add("Id registro: " +sensorList.get(i).getId_sensor() + "\n" + "\nTipo sensor:\n"+ sensorList.get(i).getSensor_type() + " \n\nValor:\n" + sensorList.get(i).getSensor_value() + "\n");
         }
     }
 
@@ -123,6 +136,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         swipeRefreshLayout.setRefreshing(false);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
     }
 
 }

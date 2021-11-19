@@ -2,6 +2,7 @@ package com.bcantero.evaluacion2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -102,6 +103,7 @@ public class RegistrarSensor_Activity extends AppCompatActivity implements View.
 
                 insertSensor(typeSensor, valueSensor, date, observation);
 
+
                 break;
 
             case R.id.btn_lightSensor:
@@ -172,7 +174,7 @@ public class RegistrarSensor_Activity extends AppCompatActivity implements View.
     }
 
     public void insertSensor(String typeSensor, String valueSensor, String date, String observation){
-        ConexionSQLiteHelper conn =   new ConexionSQLiteHelper(this, "db_sensor", null, 1);
+        ConexionSQLiteHelper conn =   new ConexionSQLiteHelper(this, "db_app", null, 1);
         SQLiteDatabase db = conn.getWritableDatabase();
 
         if(!txt_observation.getText().toString().isEmpty()){
@@ -187,6 +189,8 @@ public class RegistrarSensor_Activity extends AppCompatActivity implements View.
                 txt_observation.setText("");
 
                 Toast.makeText(getApplicationContext(), "Valores guardados correctamente", Toast.LENGTH_SHORT).show();
+                Intent intenBack = new Intent(this, MainActivity.class);
+                startActivity(intenBack);
 
             }catch (Exception e){
                 Toast.makeText(getApplicationContext(), "Error al guardar valores", Toast.LENGTH_SHORT).show();

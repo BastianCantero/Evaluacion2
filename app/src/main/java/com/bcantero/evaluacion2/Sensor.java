@@ -2,12 +2,14 @@ package com.bcantero.evaluacion2;
 
 public class Sensor {
 
+    private String id_sensor;
     private String sensor_type;
     private String sensor_value;
     private String date;
     private String observation;
 
-    public Sensor(String sensor_type, String sensor_value, String date, String observation) {
+    public Sensor(String id_sensor, String sensor_type, String sensor_value, String date, String observation) {
+        this.id_sensor = id_sensor;
         this.sensor_type = sensor_type;
         this.sensor_value = sensor_value;
         this.date = date;
@@ -15,6 +17,14 @@ public class Sensor {
     }
 
     public Sensor() {
+    }
+
+    public String getId_sensor() {
+        return id_sensor;
+    }
+
+    public void setId_sensor(String id_sensor) {
+        this.id_sensor = id_sensor;
     }
 
     public String getSensor_type() {

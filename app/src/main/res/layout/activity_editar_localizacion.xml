@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarLocalizacion_Activity">
+
+
+    <TextView
+        android:id="@+id/lbl_idRegitro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="25sp"
+        android:text="Id registro:" />
+
+    <TextView
+        android:id="@+id/lbl_valueIdRegitro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@+id/lbl_idRegitro"
+        android:text="ID"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/lbl_lugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="25sp"
+        android:text="Dirección:"
+        android:layout_below="@+id/lbl_valueIdRegitro"/>
+
+    <TextView
+        android:id="@+id/lbl_valueLugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_lugar"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="valueDireccion"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/lbl_latitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="25sp"
+        android:text="Latitud:"
+        android:layout_below="@+id/lbl_valueLugar"/>
+
+    <TextView
+        android:id="@+id/lbl_valueLatitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_latitud"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="valueLatitud"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/lbl_longitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="25sp"
+        android:text="Longitud:"
+        android:layout_below="@+id/lbl_valueLatitud"/>
+
+    <TextView
+        android:id="@+id/lbl_valueLongitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_longitud"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="valueLongitud"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btn_viewOnMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_valueLongitud"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Ver en el mapa" />
+
+    <Button
+        android:id="@+id/btn_deletePlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_viewOnMap"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Eliminar registro" />
+
+
+</RelativeLayout>
